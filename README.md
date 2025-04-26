@@ -1,10 +1,10 @@
 # STAD
 
-### 1.Gkioxari G, Malik J. Finding action tubes. In Proc. IEEE Conf. Comput. Vis. Pattern Recognit.
+### Gkioxari G, Malik J. Finding action tubes. In Proc. IEEE Conf. Comput. Vis. Pattern Recognit.
 
 我们致力于解决视频中的动作检测问题。受二维图像目标检测最新进展的推动，我们使用源自形状和运动线索的丰富特征层次结构来构建动作模型。我们以两种方式融合外观和运动。首先，从图像区域提案开始，选择那些运动显著、因此更有可能包含动作的区域。这显著减少了需要处理的区域数量，并提高了计算速度。其次，我们提取时空特征表示，以使用卷积神经网络构建强分类器。我们将预测关联起来，以产生时间一致的检测结果，我们称之为动作管。我们证明了我们的方法在动作检测任务中优于其他技术。
 
-### 2.Weinzaepfel P, Harchaoui Z, Schmid C. Learning to Track for Spatio-Temporal Action Localization. In Proc. IEEE Int. Conf. Comput.
+### Weinzaepfel P, Harchaoui Z, Schmid C. Learning to Track for Spatio-Temporal Action Localization. In Proc. IEEE Int. Conf. Comput.
 
 我们提出了一种在真实视频中实现时空动作定位的有效方法。该方法首先在帧级别检测提议，并结合静态和运动 CNN 特征对其进行评分。然后，它使用逐检测跟踪的方法在整个视频中跟踪高分提议。我们的跟踪器同时依赖于实例级和类级检测器。使用时空运动直方图（轨迹级描述符）结合 CNN 特征对轨迹进行评分。最后，我们使用轨迹级滑动窗口方法执行动作的时间定位。我们展示了在 UCF-Sports、J-HMDB 和 UCF-101 动作定位数据集上进行时空定位的实验结果，其中我们的方法优于现有技术，mAP 分别高出 15%、7% 和 12%。
 

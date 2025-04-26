@@ -1,23 +1,29 @@
 # STAD
 
-###1.Gkioxari G, Malik J. Finding action tubes. In Proc. IEEE Conf. Comput. Vis. Pattern Recognit.
+### 1.Gkioxari G, Malik J. Finding action tubes. In Proc. IEEE Conf. Comput. Vis. Pattern Recognit.
+
 我们致力于解决视频中的动作检测问题。受二维图像目标检测最新进展的推动，我们使用源自形状和运动线索的丰富特征层次结构来构建动作模型。我们以两种方式融合外观和运动。首先，从图像区域提案开始，选择那些运动显著、因此更有可能包含动作的区域。这显著减少了需要处理的区域数量，并提高了计算速度。其次，我们提取时空特征表示，以使用卷积神经网络构建强分类器。我们将预测关联起来，以产生时间一致的检测结果，我们称之为动作管。我们证明了我们的方法在动作检测任务中优于其他技术。
 
-###2.Weinzaepfel P, Harchaoui Z, Schmid C. Learning to Track for Spatio-Temporal Action Localization. In Proc. IEEE Int. Conf. Comput.
+### 2.Weinzaepfel P, Harchaoui Z, Schmid C. Learning to Track for Spatio-Temporal Action Localization. In Proc. IEEE Int. Conf. Comput.
+
 我们提出了一种在真实视频中实现时空动作定位的有效方法。该方法首先在帧级别检测提议，并结合静态和运动 CNN 特征对其进行评分。然后，它使用逐检测跟踪的方法在整个视频中跟踪高分提议。我们的跟踪器同时依赖于实例级和类级检测器。使用时空运动直方图（轨迹级描述符）结合 CNN 特征对轨迹进行评分。最后，我们使用轨迹级滑动窗口方法执行动作的时间定位。我们展示了在 UCF-Sports、J-HMDB 和 UCF-101 动作定位数据集上进行时空定位的实验结果，其中我们的方法优于现有技术，mAP 分别高出 15%、7% 和 12%。
 
 
 ### Saha S, Singh G, Sapienza M, Torr PHS, Cuzzolin F. Deep Learning for Detecting Multiple Space-Time Action Tubes in Videos
+
 在本研究中，我们提出了一种在时间上未修剪的视频中对多个并发动作进行时空定位（检测）和分类的方法。我们的框架由三个阶段组成。在第一阶段，采用外观和运动检测网络从彩色图像和光流中定位和评分动作。在第二阶段，将外观网络检测与运动检测分数相结合，并按其各自的空间重叠比例进行增强。在第三阶段，通过动态规划解决两个能量最大化问题，构建最有可能与单个动作实例相关联的检测框序列（称为动作管）。在第一阶段，通过使用检测框的类别特定分数及其空间重叠随时间链接它们来构建跨越整个视频的动作路径；在第二阶段，通过确保所有组成检测框的标签一致性来执行时间修剪。我们在极具挑战性的 UCF101、J-HMDB-21 和 LIRIS-HARL 数据集上展示了算法的性能，全面超越了 SOTA 的成果，并显著提升了测试时的检测速度。我们在动作检测性能上实现了巨大的飞跃，在 UCF-101 和 J-HMDB-21 数据集上，mAP（平均精度）与 SOTA 相比分别提升了 20% 和 11%
 
 
 ### Peng X, Schmid C. Multi-region Two-Stream R-CNN for Action Detection
+
 我们提出了一种用于真实视频中动作检测的多区域双流 R-CNN 模型。我们从基于 Faster R-CNN 的帧级动作检测入手，做出了三项贡献：（1）我们证明了运动区域提议网络可以生成高质量提议，这些提议与外观区域提议网络的提议相辅相成；（2）我们证明了在多帧上堆叠光流可以显著提升帧级动作检测效果；（3）我们在 Faster R-CNN 模型中嵌入了多区域方案，增加了关于身体部位的补充信息。然后，我们将帧级检测与维特比算法相结合，并使用最大子阵列法在时间上定位动作。在 UCF-Sports、J-HMDB 和 UCF101 动作检测数据集上的实验结果表明，我们的方法在帧地图平均得分和视频地图平均得分上均显著优于当前最佳方法。
 
 ### Wang L, Qiao Y, Tang X, Gool LV. Actionness Estimation Using Hybrid Fully Convolutional Networks
+
 动作性（Actionness）的引入是为了量化在特定位置包含通用动作实例的可能性。准确高效地估计动作性在视频分析中至关重要，并且可能有益于其他相关任务，例如动作识别和动作检测。本文提出了一种用于动作性估计的新型深度架构，称为混合全卷积网络 (H-FCN)，它由外观 FCN (A-FCN) 和运动 FCN (M-FCN) 组成。这两个 FCN 利用深度模型的强大能力，分别从静态外观和动态运动的角度估计动作性图。此外，H-FCN 的全卷积特性使其能够高效处理任意大小的视频。我们在 Stanford40、UCF Sports 和 JHMDB 等高难度数据集上进行了实验，以验证 H-FCN 在动作性估计方面的有效性，结果表明我们的方法取得了优于现有方法的性能。此外，我们将估计的动作性图应用于动作提案生成和动作检测。我们的动作性图显著提升了这些任务的当前最佳性能。
 
 ### Yang Z, Gao J, Nevatia R. Spatio-Temporal Action Detection with Cascade Proposal and Location Anticipation.
+
 在本研究中，我们致力于解决在时间上未修剪的视频中进行时空动作检测的问题。这是一项重要且具有挑战性的任务，因为在时间和空间上找到准确的人体动作对于分析大规模视频数据至关重要。为了解决这个问题，我们提出了一个用于帧级动作检测的级联提议和位置预测 (CPLA) 模型。该模型有几个突出的特点：(1) 采用级联区域提议网络 (casRPN) 生成动作提议，与单区域提议网络 (RPN) 相比，其定位精度更高；(2) 通过位置预测网络 (LAN) 利用动作的时空一致性，因此帧级动作检测并非独立进行。然后，通过求解链接分数最大化问题将帧级检测链接起来，并在时间上修剪成时空动作管。我们在具有挑战性的 UCF101 和 LIRIS-HARL 数据集上证明了该模型的有效性，均达到了最佳性能。
 
 ### Li D, Qiu Z, Dai Q, Yao T, Mei T. Recurrent Tubelet Proposal and Recognition Networks for Action Detection.

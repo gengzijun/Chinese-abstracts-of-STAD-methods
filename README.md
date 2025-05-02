@@ -205,7 +205,7 @@
 ### Leveraging Multimodal Knowledge for Spatio-Temporal Action Localization
 在混乱场景中定位人员并识别其行为是视频理解中一项更具挑战性的任务。与人类日常行为不同，混乱事件中的行为在执行方式及其对周围个体的影响方面存在显著差异，从而增加了复杂性。传统的时空动作定位方法仅依赖于单一视觉模态，在复杂场景中难以奏效。本文利用大型语言模型 (LLM) 和视觉语言 (VL) 基础模型，从多模态视角探索 STAL。我们分析了视觉 STAL 固有的特征聚合阶段，并介绍了一种专为 VL 基础模型定制的知识聚合方法，称为多模态基础知识集成 (MFKI)。MFKI 包含一个通用解码器，用于将 VL 基础模型中的知识与动作特征关联起来，以及一个用于视觉 STAL 中关系推理的专用解码器。MFKI 将通用视觉表征与特定视频特征相结合，以满足复杂 STAL 任务的需求。此外，我们利用 LLM（即 GPT）和提示来丰富标签增强，从而促进对复杂动作更全面的语言理解。在 Chaotic World 数据集上的实验证明了本文提出方法的有效性。代码可从 https://github.com/CKK-coder/Chaotic_World/tree/master 获取。
 
-### Spatio-Temporal Activity Detection via Joint Optimization of Spatial and Temporal Localization
+### Spatio-Temporal Activity Detection via Joint Optimization of Spatial and Temporal Localization (Rahman)
 本文探讨时空活动检测问题，该问题需要对视频中人类活动在空间和时间上的进行分类和定位。为此，我们提出了一个新颖的单阶段、端到端可训练深度学习框架，可以联合优化活动的空间和时间定位。该框架利用共享的时空特征图，在单个网络中执行参与者检测、活动管线构建以及活动的时间定位。在极具挑战性的 UCF101-24 基准测试中，该框架的表现优于当前最先进的时空活动检测方法。仅使用 RGB 输入，该框架实现了 60.1% 的视频 mAP，而当同时使用 RGB 和 FLOW 输入时，该标准进一步提升至 61.3%。此外，它还获得了极具竞争力的 74.9% 的帧 mAP。
 
 ### Local and Global Context Reasoning for Spatio-Temporal Action Localization
